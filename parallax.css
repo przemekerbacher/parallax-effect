@@ -1,0 +1,65 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-size: 26px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 100vh;
+  -webkit-perspective: 1px;
+          perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-wrapper {
+  position: relative;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 800px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.parallax-wrapper::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("bgc.jpg");
+  position: absolute;
+  z-index: -2;
+  -webkit-transform: translateZ(-1px) scale(2);
+          transform: translateZ(-1px) scale(2);
+}
+
+.regular-wrapper {
+  padding: 20vh 0;
+  background-color: cadetblue;
+  position: relative;
+}
+
+.content {
+  color: white;
+  margin: 0 auto;
+  padding: 50px;
+  width: 50%;
+  background: #aaa;
+}
+/*# sourceMappingURL=parallax.css.map */
